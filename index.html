@@ -4,70 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="./assets/css/estilo.css">
 </head>
 <body>
     <header>
-        <img src="./assets/img/logo.png" alt="Logo do ToDo list" />
+        <img src="./assets/img/logo.png" 
+             alt="Logo ToDo List" />
     </header>
     <main>
-        <!-- Form de Cadastro -->
+        <!-- Formulario de Cadastro -->
         <section>
             <form id="formCadastroTarefa">
                 <input type="text" 
-                       required 
-                       min="2"
+                       required minlength="2"  
                        placeholder="Adicione uma nova tarefa" />
+                
                 <button type="submit">
                     Criar 
                     <img src="./assets/img/adicionar.png" 
-                         alt="Icone de Adicionar" />
+                         alt="Icone de Criar Tarefa" />
                 </button>
             </form>
         </section>
 
-        <!-- Seção de contador -->
+        <!-- Seção dos contadores -->
         <section>
             <div>
                 <p>Tarefas criadas</p>
-                <span id="numTarefas">13</span>
+                <span id="numTarefas">12</span>
             </div>
 
             <div>
                 <p>Concluídas</p>
-                <span id="numConcluidas">12</span>
+                <span id="numConcluidas">10</span>
             </div>
 
             <div>
-                <form id="formBusca">
-                    <input type="text" required 
-                           placeholder="Busque por tarefas" />
-                    <button type="submit">Buscar</button>
-                </form>
+                <input type="text" id="inputBusca" 
+                       placeholder="Busque por Tarefas" />
             </div>
         </section>
 
-        <!-- Secão quando não possui tarefas -->
+
+        <!-- Quando não tem nenhuma tarefa -->
         <section id="semTarefas">
             <img src="./assets/img/icone-sem-tarefa.png" 
-                 alt="Icone representa um lista de tarefas" />
-
+                 alt="Icone quando não possui tarefas" />
             <h3>Você ainda não tem tarefas cadastradas</h3>
             <p>Crie tarefas e organize seus itens a fazer</p>
         </section>
 
-        <!-- Seção quando tem tarefas -->
-        <section id="listaTarefas" >
+        <!-- Quando TEM tarefa -->
+         <section id="listaTarefas">
             <div>
                 <button title="Concluir Tarefa"></button>
-                <p>
-                   Integer urna interdum massa libero auctor neque 
-                   turpis turpis semper. Duis vel sed fames integer.
-                </p>
+                <p>Lorem ipsum dolor, sit amet consectetur 
+                   adipisicing elit.</p>
                 <button title="Excluir Tarefa">
-                    <img src="./assets/img/lixeira.png" alt="Icone de Excluir" />
+                    <img src="./assets/img/lixeira.png" 
+                         alt="Icone Lixeira" />
                 </button>
             </div>
-        </section>
+         </section>
     </main>
 </body>
 </html>
