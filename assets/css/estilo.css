@@ -292,3 +292,28 @@ main > section:nth-of-type(2) > div:nth-child(2) span{
     grid-column: 1 / -1;
   }
 }
+
+@media (max-width: 321px) {
+  #formCadastroTarefa {
+    grid-template-columns: 5fr 1fr;
+    gap: 5px;
+  }
+
+  #formCadastroTarefa input[type="text"]{
+    width: 100%;
+  }
+
+  main > section:nth-of-type(2) p{
+    font-size: 0.8em;
+  }
+
+  #formCadastroTarefa button {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  #formCadastroTarefa button span {
+    display: none;
+  }
+}
