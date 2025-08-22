@@ -20,17 +20,24 @@
   --success: #16a34a;         /* verde “concluídas” */
   --success-100: #dcfce7;
 
+  --danger: #C2464D;
+  --danger-100: #f0b3b6;
+
   --radius: 12px;
   --shadow: 0 6px 18px rgba(10,10,30,.06);
 }
 
-*{ margin:0; padding:0; box-sizing:border-box; }
+*{ 
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box; 
+  transition: all 0.3s;
+}
 html,body{ height:100%; }
 body{
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
-  -webkit-font-smoothing: antialiased;
   display: flex;
   flex-direction: column;
 }
@@ -161,6 +168,7 @@ main > section:nth-of-type(2) > div:nth-child(2) span{
   border-radius: 10px;
   color: var(--text);
   font-size:14px;
+  outline-color: var(--primary);
 }
 
 /* ------------------------------
@@ -208,7 +216,6 @@ main > section:nth-of-type(2) > div:nth-child(2) span{
   border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: var(--shadow);
-  background-color: var(--gray-400);
 }
 
 /* botão “concluir” - estilo checkbox circular */
@@ -223,9 +230,6 @@ main > section:nth-of-type(2) > div:nth-child(2) span{
   position: relative;
 }
 
-#listaTarefas > div.done {
-    background-color: white;
-}
 
 /* estado concluído (adicione .done no <div> da tarefa via JS) */
 #listaTarefas > div.done > button[title="Concluir Tarefa"]{
@@ -236,7 +240,7 @@ main > section:nth-of-type(2) > div:nth-child(2) span{
   content:"";
   position:absolute;
   inset:0;
-  background: url("../img/concluido.png") center/12px 12px no-repeat;
+  background: url("../img/check.svg") center/12px 12px no-repeat;
   filter: brightness(0) invert(1);
 }
 
